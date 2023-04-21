@@ -1,6 +1,6 @@
 {
   "name": "env-types",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "This package converts environment variables to typed values.",
   "main": "src/index.js",
   "type": "module",
@@ -10,7 +10,7 @@
   "keywords": [
     "env",
     "environment",
-	"dotenv",
+    "dotenv",
     "variables",
     "types",
     "typed",
