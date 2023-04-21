@@ -1,6 +1,6 @@
 {
   "name": "env-types",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This package converts environment variables to typed values.",
   "main": "index.js",
   "type": "module",
