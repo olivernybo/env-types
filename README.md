@@ -11,16 +11,11 @@ npm install env-types
 ```
 
 ## Usage
-This is the environment file that will be used in the examples below:
-```
-NUMBER=1
-BOOLEAN=true
-STRING=hello world
-NULL=null
-UNDIFINED=undefined
-ARRAY=[1,2,3]
-OBJECT={"a":1,"b":2,"c":3}
-```
+The package uses static properties to store the environment variables, so you can access them directly from the Environment class. The properties are named after the environment variables.
+
+This means they only have to be loaded once, and you can access them from anywhere in your code, without having to pass them around or load them over and over again.
+
+If you're using environment variables that are loaded in runtime, you'll need to call the load method before accessing the environment variables. If the environment variables are already loaded, you don't need to do anything, just access the environment variables, lay back and enjoy the magic.
 
 ### With preloaded environment variables
 ```js
@@ -52,4 +47,16 @@ console.log(`Null: ${Environment.NULL} - Type: ${typeof Environment.NULL}`);
 console.log(`Undefined: ${Environment.UNDEFINED} - Type: ${typeof Environment.UNDEFINED}`);
 console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - Is array: ${Array.isArray(Environment.ARRAY)}`);
 console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT} - Is object: ${typeof Environment.OBJECT === 'object'}`);
+```
+
+### Environment variables used in the examples
+This is the environment file that I used in the examples above:
+```
+NUMBER=1
+BOOLEAN=true
+STRING=hello world
+NULL=null
+UNDIFINED=undefined
+ARRAY=[1,2,3]
+OBJECT={"a":1,"b":2,"c":3}
 ```
