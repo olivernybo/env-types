@@ -11,6 +11,16 @@ npm install env-types
 ```
 
 ## Usage
+This is the environment file that will be used in the examples below:
+```
+NUMBER=1
+BOOLEAN=true
+STRING=hello world
+NULL=null
+UNDIFINED=undefined
+ARRAY=[1,2,3]
+OBJECT={"a":1,"b":2,"c":3}
+```
 
 ### With preloaded environment variables
 ```js
