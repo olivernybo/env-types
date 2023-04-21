@@ -27,7 +27,6 @@ export class Environment {
 	 */
 	static load() {
 		// Get the current environment variables.
-
 		const env = process.env;
 
 		// Loop through the environment variables.
