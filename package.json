@@ -1,6 +1,6 @@
 {
   "name": "env-types",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This package converts environment variables to typed values.",
   "main": "index.js",
   "type": "module",
@@ -8,17 +8,17 @@
     "test": "node -r dotenv/config test.js dotenv_config_path=.test.env"
   },
   "keywords": [
-	"env",
-	"environment",
-	"variables",
-	"types",
-	"typed",
-	"convert",
-	"conversion",
-	"parse",
-	"parsing",
-	"strong",
-	"strict"
+    "env",
+    "environment",
+    "variables",
+    "types",
+    "typed",
+    "convert",
+    "conversion",
+    "parse",
+    "parsing",
+    "strong",
+    "strict"
   ],
   "author": "Oliver Nybo <oliver@nybo.dev>",
   "license": "MIT",
