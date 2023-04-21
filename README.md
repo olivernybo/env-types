@@ -1,6 +1,8 @@
 # Environment variables with types
 
-This package converts the values of environment variables to their respective types.
+Are you tired of converting environment variables to their respective types, like me? Then this package is for you! This package converts the values of environment variables to their respective types, so you don't have to worry about it anymore.
+
+It supports it all (I think, except functions, of course): numbers, booleans, strings, null, undefined, arrays and objects. It also supports nested objects and arrays, in other words, it supports JSON.
 
 ## Installation
 
