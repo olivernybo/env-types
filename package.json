@@ -10,6 +10,7 @@
   "keywords": [
     "env",
     "environment",
+	"dotenv",
     "variables",
     "types",
     "typed",
