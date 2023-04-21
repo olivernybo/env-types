@@ -1,6 +1,6 @@
 # Environment variables with types
 
-This package converts environment variables to typed values.
+This package converts the values of environment variables to their respective types.
 
 ## Installation
 
@@ -12,11 +12,15 @@ npm install env-types
 
 ### With preloaded environment variables
 ```js
-import { Environment } from 'env-types';
+import { Environment } from './index.js';
 
 console.log(`Number: ${Environment.NUMBER} - Type: ${typeof Environment.NUMBER}`);
 console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEAN}`);
 console.log(`String: ${Environment.STRING} - Type: ${typeof Environment.STRING}`);
+console.log(`Null: ${Environment.NULL} - Type: ${typeof Environment.NULL}`);
+console.log(`Undefined: ${Environment.UNDEFINED} - Type: ${typeof Environment.UNDEFINED}`);
+console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - Is array: ${Array.isArray(Environment.ARRAY)}`);
+console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT} - Is object: ${typeof Environment.OBJECT === 'object'}`);
 ```
 
 ### With environment variables loaded in runtime (using dotenv for example)
@@ -32,3 +36,8 @@ Environment.load();
 console.log(`Number: ${Environment.NUMBER} - Type: ${typeof Environment.NUMBER}`);
 console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEAN}`);
 console.log(`String: ${Environment.STRING} - Type: ${typeof Environment.STRING}`);
+console.log(`Null: ${Environment.NULL} - Type: ${typeof Environment.NULL}`);
+console.log(`Undefined: ${Environment.UNDEFINED} - Type: ${typeof Environment.UNDEFINED}`);
+console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - Is array: ${Array.isArray(Environment.ARRAY)}`);
+console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT} - Is object: ${typeof Environment.OBJECT === 'object'}`);
+```

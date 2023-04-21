@@ -7,9 +7,22 @@
   "scripts": {
     "test": "node -r dotenv/config test.js dotenv_config_path=.test.env"
   },
-  "keywords": [],
+  "keywords": [
+	"env",
+	"environment",
+	"variables",
+	"types",
+	"typed",
+	"convert",
+	"conversion",
+	"parse",
+	"parsing",
+	"strong",
+	"strict"
+  ],
   "author": "Oliver Nybo <oliver@nybo.dev>",
   "license": "MIT",
+  "repository": "github:olivernybo/env-types",
   "devDependencies": {
     "dotenv": "^16.0.3"
   }
