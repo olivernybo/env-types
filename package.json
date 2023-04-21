@@ -8,10 +8,17 @@
     "test": "node -r dotenv/config src/test.js dotenv_config_path=.test.env"
   },
   "keywords": [
+	"process",
+	"process.env",
     "env",
     "environment",
     "dotenv",
+	"var",
+	"variable",
     "variables",
+	"value",
+	"values",
+	"type",
     "types",
     "typed",
     "convert",
