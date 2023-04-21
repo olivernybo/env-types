@@ -24,7 +24,7 @@ OBJECT={"a":1,"b":2,"c":3}
 
 ### With preloaded environment variables
 ```js
-import { Environment } from './index.js';
+import { Environment } from 'env-types';
 
 console.log(`Number: ${Environment.NUMBER} - Type: ${typeof Environment.NUMBER}`);
 console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEAN}`);
