@@ -52,7 +52,7 @@ export class Environment {
 			}
 
 			// Check if the value is null.
-			if (lowerCaseValue === 'null') {
+			if (lowerCaseValue === 'null' || lowerCaseValue === '') {
 				Environment[key] = null;
 				continue;
 			}
