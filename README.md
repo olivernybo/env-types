@@ -26,8 +26,8 @@ console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEA
 console.log(`String: ${Environment.STRING} - Type: ${typeof Environment.STRING}`);
 console.log(`Null: ${Environment.NULL} - Type: ${typeof Environment.NULL}`);
 console.log(`Undefined: ${Environment.UNDEFINED} - Type: ${typeof Environment.UNDEFINED}`);
+console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT}`);
 console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - Is array: ${Array.isArray(Environment.ARRAY)}`);
-console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT} - Is object: ${typeof Environment.OBJECT === 'object'}`);
 ```
 
 ### With environment variables loaded in runtime (using dotenv for example)
@@ -45,8 +45,8 @@ console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEA
 console.log(`String: ${Environment.STRING} - Type: ${typeof Environment.STRING}`);
 console.log(`Null: ${Environment.NULL} - Type: ${typeof Environment.NULL}`);
 console.log(`Undefined: ${Environment.UNDEFINED} - Type: ${typeof Environment.UNDEFINED}`);
+console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT}`);
 console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - Is array: ${Array.isArray(Environment.ARRAY)}`);
-console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT} - Is object: ${typeof Environment.OBJECT === 'object'}`);
 ```
 
 ### Environment variables used in the examples
@@ -56,7 +56,29 @@ NUMBER=1
 BOOLEAN=true
 STRING=hello world
 NULL=null
+NULL_2=
 UNDIFINED=undefined
 ARRAY=[1,2,3]
 OBJECT={"a":1,"b":2,"c":3}
 ```
+
+## API
+
+### Environment.load(config?)
+Loads the environment variables. If you're using environment variables that are loaded in runtime, you'll need to call this method before accessing the environment variables.
+
+#### config
+Type: `object`  
+Required: `false`
+
+##### binaryToBooleans
+If set to true, the package will convert the string `1` to `true` and the string `0` to `false`.
+
+Type: `boolean`  
+Default: `true`
+
+##### emptyStringsToNull
+If set to true, the package will convert empty strings to `null`.
+
+Type: `boolean`  
+Default: `true`

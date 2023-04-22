@@ -1,7 +1,7 @@
 /**
  * Environment variables with type conversion.
  * Has all the environment variables as properties.
- * Supports number, boolean and string.
+ * Supports number, boolean string, null, undefined, array and object (JSON).
  * 
  * If you're not adding the environment variables before script execution, you'll need to call the load method.
  * 
@@ -23,9 +23,18 @@ export class Environment {
 	/**
 	 * Loads the environment variables.
 	 * 
+	 * @param {Object} config The configuration object.
+	 * @param {boolean} config.binaryToBooleans If true, it will convert 1 and 0 to booleans.
+	 * @param {boolean} config.emptyStringsToNull If true, it will convert empty strings to null.
+	 * 
 	 * @returns {Environment} The Environment class with the environment variables as properties.
 	 */
-	static load() {
+	static load(config = {
+		// If true, it will convert 1 and 0 to booleans.
+		binaryToBooleans: true,
+		// If true, it will convert empty strings to null.
+		emptyStringsToNull: true
+	}) {
 		// Get the current environment variables.
 		const env = process.env;
 
@@ -33,13 +42,6 @@ export class Environment {
 		for (const key in env) {
 			// Get the value.
 			const value = env[key];
-
-			// Check if the value is a number.
-			const number = Number(value);
-			if (!isNaN(number)) {
-				Environment[key] = number;
-				continue;
-			}
 
 			// Check if the value is a boolean.
 			const lowerCaseValue = value.trim().toLowerCase();
@@ -51,8 +53,19 @@ export class Environment {
 				continue;
 			}
 
+			// Check if the value is a binary boolean.
+			if (config.binaryToBooleans) {
+				if (lowerCaseValue === '1') {
+					Environment[key] = true;
+					continue;
+				} else if (lowerCaseValue === '0') {
+					Environment[key] = false;
+					continue;
+				}
+			}
+
 			// Check if the value is null.
-			if (lowerCaseValue === 'null' || lowerCaseValue === '') {
+			if (lowerCaseValue === 'null' || (config.emptyStringsToNull && lowerCaseValue === '')) {
 				Environment[key] = null;
 				continue;
 			}
@@ -60,6 +73,13 @@ export class Environment {
 			// Check if the value is undefined.
 			if (lowerCaseValue === 'undefined') {
 				Environment[key] = undefined;
+				continue;
+			}
+
+			// Check if the value is a number.
+			const number = Number(value);
+			if (!isNaN(number)) {
+				Environment[key] = number;
 				continue;
 			}
 

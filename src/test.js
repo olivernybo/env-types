@@ -34,6 +34,9 @@ describe('Checking null', () => {
 	it('should be null', () => {
 		assert.strictEqual(Environment.NULL, null);
 	});
+	it('should also be null', () => {
+		assert.strictEqual(Environment.NULL_2, null);
+	});
 });
 
 describe('Checking undefined', () => {
