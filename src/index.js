@@ -93,6 +93,7 @@ export class Environment {
 				// Do nothing.
 			}
 
+			// The value is a string.
 			Environment[key] = value;
 		}
 
