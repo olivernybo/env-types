@@ -15,7 +15,7 @@ The package uses static properties to store the environment variables, so you ca
 
 This means they only have to be loaded once, and you can access them from anywhere in your code, without having to pass them around or load them over and over again.
 
-If you're using environment variables that are loaded in runtime, you'll need to call the load method before accessing the environment variables. If the environment variables are already loaded, you don't need to do anything, just access the environment variables, lay back and enjoy the magic.
+If you're using environment variables that are loaded in runtime, you'll need to call the load method before accessing them. If they are already loaded, you don't need to do anything, just access them, lay back and enjoy the magic.
 
 ### With preloaded environment variables
 ```js
@@ -65,7 +65,7 @@ OBJECT={"a":1,"b":2,"c":3}
 ## API
 
 ### Environment.load(config?)
-Loads the environment variables. If you're using environment variables that are loaded in runtime, you'll need to call this method before accessing the environment variables.
+Loads the environment variables. If you're using environment variables that are loaded in runtime, you'll need to call this method before accessing them.
 
 #### config
 Type: `object`  
