@@ -1,5 +1,7 @@
 import { EnvironmentConfig } from './EnvironmentConfig';
 
+type NotFunction<T> = T extends Function ? never : T;
+
 /**
  * Environment variables with type conversion.
  * Has all the environment variables as properties.
@@ -20,10 +22,9 @@ import { EnvironmentConfig } from './EnvironmentConfig';
  * console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEAN}`);
  * console.log(`String: ${Environment.STRING} - Type: ${typeof Environment.STRING}`);
  */
-
 export class Environment {
 
-	static [key: string]: string | number | boolean | undefined | null | object | Array<any>;
+	static [key: string]: any;
 
 	/**
 	 * Loads the environment variables.
