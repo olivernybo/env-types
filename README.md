@@ -64,21 +64,17 @@ OBJECT={"a":1,"b":2,"c":3}
 
 ## API
 
-### Environment.load(config?)
+### Environment.load(config?: EnvironmentConfig)
 Loads the environment variables. If you're using environment variables that are loaded in runtime, you'll need to call this method before accessing them.
 
-#### config
-Type: `object`  
-Required: `false`
+### EnvironmentConfig
 
-##### binaryToBooleans
+##### binaryToBooleans?: boolean
 If set to true, the package will convert the string `1` to `true` and the string `0` to `false`.
 
-Type: `boolean`  
 Default: `true`
 
-##### emptyStringsToNull
+##### emptyStringsToNull?: boolean
 If set to true, the package will convert empty strings to `null`.
 
-Type: `boolean`  
 Default: `true`
