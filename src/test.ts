@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { Environment } from "./Environment.js";
+import { Environment } from './Environment.js';
 
 describe('Checking number', () => {
 	it('should be a number', () => {
