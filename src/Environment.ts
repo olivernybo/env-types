@@ -40,7 +40,7 @@ export class Environment {
 		binaryToBooleans: true,
 		// If true, it will convert empty strings to null.
 		emptyStringsToNull: true
-	}) {
+	}): Environment {
 		// Get the current environment variables.
 		const env = process.env;
 
