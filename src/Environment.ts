@@ -1,7 +1,5 @@
 import { EnvironmentConfig } from './EnvironmentConfig';
 
-type NotFunction<T> = T extends Function ? never : T;
-
 /**
  * Environment variables with type conversion.
  * Has all the environment variables as properties.
