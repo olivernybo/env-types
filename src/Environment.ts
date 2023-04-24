@@ -1,35 +1,40 @@
+import { EnvironmentConfig } from './EnvironmentConfig';
+
 /**
  * Environment variables with type conversion.
  * Has all the environment variables as properties.
  * Supports number, boolean string, null, undefined, array and object (JSON).
- * 
+ *
  * If you're not adding the environment variables before script execution, you'll need to call the load method.
- * 
+ *
  * @example
  * import { Environment } from 'env-types';
- * 
+ *
  * // If you're not adding the environment variables before script execution,
  * // you'll need to call the load method. Like this:
  * import dotenv from 'dotenv';
  * dotenv.config();
  * Environment.load();
- * 
+ *
  * console.log(`Number: ${Environment.NUMBER} - Type: ${typeof Environment.NUMBER}`);
  * console.log(`Boolean: ${Environment.BOOLEAN} - Type: ${typeof Environment.BOOLEAN}`);
  * console.log(`String: ${Environment.STRING} - Type: ${typeof Environment.STRING}`);
  */
+
 export class Environment {
+
+	static [key: string]: string | number | boolean | undefined | null | object | Array<any>;
 
 	/**
 	 * Loads the environment variables.
-	 * 
+	 *
 	 * @param {Object} config The configuration object.
 	 * @param {boolean} config.binaryToBooleans If true, it will convert 1 and 0 to booleans.
 	 * @param {boolean} config.emptyStringsToNull If true, it will convert empty strings to null.
-	 * 
+	 *
 	 * @returns {Environment} The Environment class with the environment variables as properties.
 	 */
-	static load(config = {
+	static load(config: EnvironmentConfig = {
 		// If true, it will convert 1 and 0 to booleans.
 		binaryToBooleans: true,
 		// If true, it will convert empty strings to null.
@@ -41,7 +46,7 @@ export class Environment {
 		// Loop through the environment variables.
 		for (const key in env) {
 			// Get the value.
-			const value = env[key];
+			const value = env[key] ?? '';
 
 			// Check if the value is a boolean.
 			const lowerCaseValue = value.trim().toLowerCase();

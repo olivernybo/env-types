@@ -52,7 +52,7 @@ console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - I
 ### Environment variables used in the examples
 This is the environment file that I used in the examples above:
 ```
-NUMBER=1
+NUMBER=8
 BOOLEAN=true
 STRING=hello world
 NULL=null

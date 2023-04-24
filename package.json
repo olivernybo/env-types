@@ -2,11 +2,13 @@
   "name": "env-types",
   "version": "1.4.0",
   "description": "This package converts environment variables to typed values.",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
-  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node -r dotenv/config src/test.js dotenv_config_path=.test.env"
+	"prepare": "npm run build",
+	"prepublishOnly": "npm test",
+	"build": "tsc",
+    "test": "npm run build && node -r dotenv/config dist/test.js dotenv_config_path=.test.env"
   },
   "keywords": [
     "process",
@@ -33,6 +35,8 @@
   "license": "MIT",
   "repository": "github:olivernybo/env-types",
   "devDependencies": {
-    "dotenv": "^16.0.3"
+    "@types/node": "^18.16.0",
+    "dotenv": "^16.0.3",
+    "typescript": "^5.0.4"
   }
 }

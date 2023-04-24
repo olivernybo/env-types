@@ -1,14 +1,14 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { Environment } from './index.js';
+import { Environment } from "./Environment.js";
 
 describe('Checking number', () => {
 	it('should be a number', () => {
 		assert.strictEqual(typeof Environment.NUMBER, 'number');
 	});
 	it('should be 1', () => {
-		assert.strictEqual(Environment.NUMBER, 1);
+		assert.strictEqual(Environment.NUMBER, 8);
 	});
 });
 
