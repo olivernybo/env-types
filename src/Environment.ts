@@ -22,7 +22,7 @@ import { EnvironmentConfig } from './EnvironmentConfig';
  */
 export class Environment {
 
-	static [key: string]: any;
+	static [key: string]: string | number | boolean | { [key: string]: any } | any[] | null | undefined;
 
 	/**
 	 * Loads the environment variables.
