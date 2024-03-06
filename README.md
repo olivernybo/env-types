@@ -70,11 +70,9 @@ Loads the environment variables. If you're using environment variables that are 
 ### EnvironmentConfig
 
 ##### binaryToBooleans?: boolean
-If set to true, the package will convert the string `1` to `true` and the string `0` to `false`.
-
+If set to true, the package will convert the string `1` to `true` and the string `0` to `false`.  
 Default: `true`
 
 ##### emptyStringsToNull?: boolean
-If set to true, the package will convert empty strings to `null`.
-
+If set to true, the package will convert empty strings to `null`.  
 Default: `true`
