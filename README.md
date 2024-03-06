@@ -57,7 +57,7 @@ BOOLEAN=true
 STRING=hello world
 NULL=null
 NULL_2=
-UNDIFINED=undefined
+UNDEFINED=undefined
 ARRAY=[1,2,3]
 OBJECT={"a":1,"b":2,"c":3}
 ```
