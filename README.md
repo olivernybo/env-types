@@ -30,7 +30,7 @@ console.log(`Object: ${Environment.OBJECT} - Type: ${typeof Environment.OBJECT}`
 console.log(`Array: ${Environment.ARRAY} - Type: ${typeof Environment.ARRAY} - Is array: ${Array.isArray(Environment.ARRAY)}`);
 ```
 
-### With environment variables loaded in runtime (using dotenv for example)
+### With environment variables loaded in runtime (using dotenv as an example)
 ```js
 import dotenv from 'dotenv';
 import { Environment } from 'env-types';
